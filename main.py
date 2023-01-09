@@ -3,7 +3,7 @@ import random
 from telegram import *
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ConversationHandler
 import telebot
-bot = telebot.TeleBot("5897932324:AAFLnroabEfCmftgW-utI_Jj7X7n-Hdfapk")
+bot = telebot.TeleBot(TOKEN)
 
 
 logging.basicConfig(filename='log.txt',
@@ -108,7 +108,7 @@ async def bye(update, context):
     return ConversationHandler.END
 
 
-app = ApplicationBuilder().token("5897932324:AAFLnroabEfCmftgW-utI_Jj7X7n-Hdfapk").build()
+app = ApplicationBuilder().token(TOKEN).build()
 
 game_conversation_handler = ConversationHandler(
     # точка входа в разговор
